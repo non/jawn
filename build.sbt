@@ -113,13 +113,6 @@ lazy val parser = crossProject(JVMPlatform, NativePlatform)
   .settings(jawnSettings: _*)
   .jvmSettings(jvmSettings: _*)
   .nativeSettings(nativeSettings: _*)
-  .settings(
-    Test / unmanagedSourceDirectories ++= (
-      if (ScalaArtifacts.isScala3(scalaVersion.value))
-        List(baseDirectory.value / "src" / "test" / "dotty")
-      else Nil
-    )
-  )
   .disablePlugins(JmhPlugin)
 
 lazy val util = crossProject(JVMPlatform, NativePlatform)
