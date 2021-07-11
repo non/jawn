@@ -9,7 +9,7 @@ ThisBuild / scalaVersion := scala212
 ThisBuild / organization := "org.typelevel"
 ThisBuild / licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 ThisBuild / homepage := Some(url("http://github.com/typelevel/jawn"))
-
+ThisBuild / versionScheme := Some("early-semver")
 ThisBuild / scmInfo := Some(
   ScmInfo(
     browseUrl = url("https://github.com/typelevel/jawn"),
